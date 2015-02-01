@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_amigo">Contactos</string>
+    <string name="app_login">Iniciar Sessión</string>
+    <string name="action_chat">Chat Demo</string>
+    <!-- Opciones del menu -->
+    <string name="action_New">Nuevo Usuario</string>
+    <string name="action_Contacto">Información</string>
+    <string name="action_amigos">Lista Amigos</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_act_registro">actRegistro</string>
+    <string name="title_activity_act_login">actLogin</string>
+    <string name="app_login_name">USUARIO:</string>
+    <string name="app_login_pass">CONTRASEÑA:</string>
+    <string name="title_activity_act_detalle">actDetalle</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_act_chat">act_chat</string>
+
+</resources>

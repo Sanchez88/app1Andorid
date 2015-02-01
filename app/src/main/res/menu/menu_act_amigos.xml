@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ronald.app1andorid.act_amigos">
+    <item android:id="@+id/app_amigo" android:title="@string/app_amigo"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

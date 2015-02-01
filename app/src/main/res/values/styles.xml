@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DialogWhenLarge">
+        <!-- Customize your theme here. -->
+    </style>
+    <color name="head">#3F51B5</color>
+
+</resources>
