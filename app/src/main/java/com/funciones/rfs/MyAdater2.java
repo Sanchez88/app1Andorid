@@ -29,6 +29,7 @@ public class MyAdater2 extends RecyclerView.Adapter<MyAdater2.ViewHolder> {
         // each data item is just a string in this case
         public TextView titulo, descrip;
         public ImageView img;
+
         public ViewHolder(View v) {
             super(v);
             titulo = (TextView) v.findViewById(R.id.twTitulo);

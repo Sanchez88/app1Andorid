@@ -3,6 +3,7 @@ package com.example.ronald.app1andorid;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -56,11 +57,11 @@ public class act_amigos extends ActionBarActivity {
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // specify an adapter (see also next example)
-        mAdapter = new MyAdater2(lista);
-        //mRecyclerView.setAdapter(mAdapter);
+                // specify an adapter (see also next example)
+        mRecyclerView.setAdapter(new MyAdater2(lista));
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         /*
         AdapterMy my = new AdapterMy(getApplicationContext(),lista);
