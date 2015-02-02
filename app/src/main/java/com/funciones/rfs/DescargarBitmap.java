@@ -54,25 +54,25 @@ public class DescargarBitmap  extends AsyncTask<Void, Void, Bitmap> {
                 File file = new File(carpeta, this.name + ".jpeg");
                 if(file.exists()){
                    return BitmapFactory.decodeFile(file.getAbsolutePath());
-                }else{
+                }
+                else {
                     bitmap = Conexion.cargarImg(url);
+
+
+                    try {
+                        output = new FileOutputStream(file);
+                        bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
+                        output.flush();
+                        output.close();
+
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
 
-
-                try {
-                    output = new FileOutputStream(file);
-                    bitmap.compress(Bitmap.CompressFormat.JPEG,80,output);
-                    output.flush();
-                    output.close();
-
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-
-                return Conexion.cargarImg(url);
+                return bitmap;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

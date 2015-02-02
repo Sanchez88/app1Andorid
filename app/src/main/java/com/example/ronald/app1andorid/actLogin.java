@@ -43,7 +43,7 @@ public class actLogin extends ActionBarActivity {
 
         selList = new ArrayList();
 
-
+/*
         AlertDialog.Builder dialogo = new AlertDialog.Builder(actLogin.this);
         dialogo.setTitle("Titulo del dialogo");
         dialogo.setSingleChoiceItems(nombre, -1, new DialogInterface.OnClickListener() {
@@ -74,7 +74,7 @@ public class actLogin extends ActionBarActivity {
         });
 
         dialogo.show();
-
+*/
 
         txtMail = (EditText) findViewById(R.id.txtMailLog);
         txtPass = (EditText) findViewById(R.id.txtPassLog);
