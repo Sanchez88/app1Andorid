@@ -60,6 +60,7 @@ public class MyAdater2 extends RecyclerView.Adapter<MyAdater2.ViewHolder> {
         clListPer per = dato.get(position);
         holder.titulo.setText(per.getTitulo());
         holder.descrip.setText(per.getDescripcion());
+
         new DescargarBitmap(holder.img, per.getSrc(),per.getName()).execute();
     }
 
