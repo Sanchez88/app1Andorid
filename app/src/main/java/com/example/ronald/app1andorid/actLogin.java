@@ -6,10 +6,13 @@ import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Environment;
+import android.provider.ContactsContract;
 import android.support.v4.view.MenuItemCompat;
 import android.os.Bundle;
 
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +27,7 @@ import com.funciones.rfs.clMesaje;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import static android.view.View.OnClickListener;
@@ -42,6 +46,21 @@ public class actLogin extends ActionBarActivity {
         final boolean [] ck = new boolean[nombre.length];
 
         selList = new ArrayList();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                File carpeta = new File( Environment.getExternalStorageDirectory().getAbsolutePath() + "/app1AndroidImg");
+                if(carpeta.exists()){
+                    if(carpeta.listFiles().length > 0){
+                        for(File f : carpeta.listFiles())
+                            f.delete();
+                    }
+
+                    carpeta.delete();
+                }
+            }
+        }).start();
 
 /*
         AlertDialog.Builder dialogo = new AlertDialog.Builder(actLogin.this);

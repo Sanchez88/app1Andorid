@@ -46,18 +46,20 @@ public class DescargarBitmap  extends AsyncTask<Void, Void, Bitmap> {
 
                 File directorio = Environment.getExternalStorageDirectory();
 
-                File carpeta = new File(directorio.getAbsolutePath() + "/app1AndroidImg");
 
-                if(!carpeta.exists())
-                     carpeta.mkdir();
+                File carpeta = new File(directorio.getAbsolutePath() + "/app1AndroidImg");
+                if(!carpeta.exists()){
+                    carpeta.mkdir();
+                }
 
                 File file = new File(carpeta, this.name + ".jpeg");
                 if(file.exists()){
+
                    return BitmapFactory.decodeFile(file.getAbsolutePath());
                 }
                 else {
                     bitmap = Conexion.cargarImg(url);
-
+                    //File cache = Environment.getDownloadCacheDirectory();
 
                     try {
                         output = new FileOutputStream(file);

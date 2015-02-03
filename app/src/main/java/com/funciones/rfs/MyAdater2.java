@@ -27,13 +27,13 @@ public class MyAdater2 extends RecyclerView.Adapter<MyAdater2.ViewHolder> {
     // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView titulo, descrip;
+        public TextView titulo, descrip, nombre;
         public ImageView img;
 
         public ViewHolder(View v) {
             super(v);
             titulo = (TextView) v.findViewById(R.id.twTitulo);
-            descrip = (TextView) v.findViewById(R.id.twTitulo);
+            descrip = (TextView) v.findViewById(R.id.twDescripcion);
             img = (ImageView) v.findViewById(R.id.imgView);
 
 
