@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.base.rfs.clContador;
 import com.funciones.rfs.ConexionWS;
 import com.funciones.rfs.clMesaje;
 
@@ -42,8 +43,8 @@ public class actLogin extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_login);
-        final String [] nombre = {"Editar", "Eliminar"};
-        final boolean [] ck = new boolean[nombre.length];
+        //final String [] nombre = {"Editar", "Eliminar"};
+        //final boolean [] ck = new boolean[nombre.length];
 
         selList = new ArrayList();
 
@@ -62,6 +63,8 @@ public class actLogin extends ActionBarActivity {
             }
         }).start();
 
+       // clContador contador = new clContador(getApplicationContext());
+       // contador.insert(1220);
 /*
         AlertDialog.Builder dialogo = new AlertDialog.Builder(actLogin.this);
         dialogo.setTitle("Titulo del dialogo");
